@@ -40,8 +40,9 @@ public class Footer extends HBox {
 		versionText.setText("v1.0");
 		versionText.setFont(Font.font("sans-serif", FontWeight.THIN, 8));
 
-		// Set the header components in Horizontal order.
+		// Set the footer components in Horizontal order.
 		this.getChildren().addAll(footerText, versionText);
+		this.setMinWidth(400);
 	}
 
 	public void setMessage(String message) {

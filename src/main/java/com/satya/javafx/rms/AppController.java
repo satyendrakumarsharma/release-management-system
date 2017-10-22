@@ -1,6 +1,5 @@
 package com.satya.javafx.rms;
 
-import com.satya.javafx.rms.business.CommonReleaseBusiness;
 import com.satya.javafx.rms.ui.main.MainCentralPresenter;
 import com.satya.javafx.rms.ui.main.MainCentralViewScreen;
 
@@ -17,7 +16,6 @@ import javafx.stage.Stage;
  */
 public class AppController extends Application {
 
-	private Stage primaryStage;
 	private MainCentralViewScreen mainCentralViewScreen;
 
 	public static void start(String... args) {
@@ -27,14 +25,12 @@ public class AppController extends Application {
 	public void init() {
 		BorderPane root = new BorderPane();
 		mainCentralViewScreen = new MainCentralViewScreen(root, 500, 700);
-		@SuppressWarnings("unused")
-		MainCentralPresenter mcp = new MainCentralPresenter(new CommonReleaseBusiness(), mainCentralViewScreen);
+		MainCentralPresenter mcp = new MainCentralPresenter(mainCentralViewScreen);
 		mcp.init();
 	}
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		this.primaryStage = primaryStage;
 		try {
 			primaryStage.setScene(mainCentralViewScreen); // Default Screen
 			primaryStage.setTitle("Release Management System");
