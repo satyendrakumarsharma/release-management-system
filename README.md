@@ -1,2 +1,8 @@
 # release-management-system
-This is a javaFX application to execute operations on remote unix servers.
+This is a desktop application to execute a sequence of operations on remote unix servers.
+
+Programming Language
+Java
+
+Design Patterns
+Chain of Responsibility
